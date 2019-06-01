@@ -4,9 +4,22 @@
   tasks: 
    - name: install application
      yum:
+<<<<<<< HEAD
        name: {{item}} 
+=======
+       name: {{ item }}
+>>>>>>> f32e87e7f218f9e766968f0d317e1987f423716b
        state: present 
        with_items:
         - httpd 
         - python
+<<<<<<< HEAD
         
+=======
+    - name: ensure httpd started
+      service: 
+         name: httpd 
+         state: started 
+         enabled: yes
+    
+>>>>>>> f32e87e7f218f9e766968f0d317e1987f423716b
