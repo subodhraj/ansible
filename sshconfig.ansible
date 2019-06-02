@@ -7,7 +7,7 @@
         path: /etc/ssh/sshd_config
         regexp: '^Permitrootlogin'
         line: Permitrootlogin yes 
-    - name: sshd panos_restart:
+    - name: sshd panos_restart
       service:
           name: sshd
           state: restarted
