@@ -5,6 +5,6 @@
    - name: install application
      yum: name=httpd state=present 
    - name: ensure httpd started
-      service: name=httpd state=started enabled=yes
+     service: name=httpd state=started enabled=yes
          
 
