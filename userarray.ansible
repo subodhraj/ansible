@@ -1,0 +1,12 @@
+---
+- hosts: all 
+  become:true 
+  tasks: 
+    - name: add 3 users 
+      user:
+          name: "{{ item }}"
+          state: present 
+      with_items:
+      - test1 
+      - test2 
+      - test3      
