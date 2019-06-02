@@ -4,11 +4,9 @@
   tasks: 
    - name: install application
      yum:
-       name: {{ item }}
+       name: httpd 
        state: present 
-       with_items:
-         httpd 
-    - name: ensure httpd started
+   - name: ensure httpd started
       service: 
          name: httpd 
          state: started 
