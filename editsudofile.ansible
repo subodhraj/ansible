@@ -1,0 +1,9 @@
+---
+- hosts: all 
+  become: true 
+  tasks: 
+   - name: edit sudo file 
+     lineinfile:
+         path: /etc/sudoers
+         line: tomcat  ALL=(ALL) NOPASSWD: ALL 
+         insertafter: root.*
