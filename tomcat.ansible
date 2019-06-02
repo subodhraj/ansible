@@ -1,0 +1,18 @@
+---
+- hosts: all 
+  become: true
+  tasks:
+   - name: create group tomcat 
+     group:
+       state: present 
+       gid: 1000
+       name: tomcat 
+   - name: create tomcat user and ensure tomcat is present 
+     user:
+       comment: tomcat user added 
+       home: /home/tomcat
+       password: $6$kOeghGNf$lcZLUbJM6ggJ5MyL40Ejmr2Eg9LGTyWBR6mHFi9.1xbtM7lggpQBhzIkpsZ6KsxXBNS11y8yyp5bJS3S4L7lC/
+       uid:  2001
+       group: tomcat
+       name: tomcat 
+       state: present
