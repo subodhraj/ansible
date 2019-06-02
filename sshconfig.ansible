@@ -1,0 +1,15 @@
+---
+- hosts: all 
+  become: true 
+  tasks: 
+    - name: sshd file config 
+      lineinfile: 
+        path: /etc/ssh/sshd_config
+        regexp: '^Permitrootlogin'
+        line: Permitrootlogin yes 
+    - name: sshd panos_restart:
+      service:
+          name: sshd
+          state: restarted
+          
+         
