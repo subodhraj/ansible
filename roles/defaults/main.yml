@@ -1,2 +1,15 @@
 ---
-# defaults file for roles
+- name: create group tomcat 
+     group:
+       state: present 
+       gid: 1000
+       name: tomcat 
+   - name: create tomcat user and ensure tomcat is present 
+     user:
+       comment: tomcat user added 
+       home: /home/tomcat
+       password: tomcat 
+       uid:  2001
+       group: tomcat
+       name: tomcat 
+       state: present
