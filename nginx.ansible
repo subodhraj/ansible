@@ -7,7 +7,9 @@
      - name: ensure nginx is on 
        service: name=vsftpd enabled=yes state=started 
        notify: restart httpd
-
+  wait_for:
+    port: 80
+    state: started
   handlers: 
      - name: restart httpd 
        service: name=httpd state=restarted 
