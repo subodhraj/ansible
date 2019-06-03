@@ -11,10 +11,10 @@
         line: PASS_MAX_DAYS 90
     - name: modify /etc/login.defs 
        lineinfile: 
-        path: /etc/login.defs 
-        regexp: '^PASS_MIN_DAYS'
-        line:  PASS_MIN_DAYS 7
+         path: /etc/login.defs 
+         regexp: '^PASS_MIN_DAYS'
+         line:  PASS_MIN_DAYS 7
     - name: create welcome message in  /etc/motd 
         lineinfile: 
-        path: /etc/motd 
-        line: Welcome message 
+         path: /etc/motd 
+         line: Welcome message 
