@@ -1,4 +1,4 @@
 ---
-- include: httpd.ansible
-- include: tomcat.yml
+- import_playbook: httpd.ansible
+- import_playbook: tomcat.yml
   
